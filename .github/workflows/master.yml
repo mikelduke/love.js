@@ -17,4 +17,4 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: love-js
-        path: ${{ steps.love-build.outputs.love-js-output }}
+        path: ${{ steps.love-js-build.outputs.love-js-output }}
