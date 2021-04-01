@@ -7,8 +7,10 @@ ADD ./ /love-js
 WORKDIR  /love-js
 
 RUN npm install \
-    && npm link
+    && npm link \
+    && apk update \
+    && apk add zip
 
 WORKDIR /app
 
-ENTRYPOINT [ "love-js" ]
+ENTRYPOINT [ "/love-js/build-action.sh" ]

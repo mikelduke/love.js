@@ -1,0 +1,30 @@
+# action.yml
+name: 'LÖVE-js Build'
+author: 'Mikel Duke <@mikelduke>'
+description: 'Action for building LÖVE html5 distributables'
+branding:
+  icon: 'heart'
+  color: 'red'
+inputs:
+  title:
+    description: 'Game name'
+    default: 'love-build-app'
+    required: true
+  source_file:
+    description: 'Path in the repository to the `.love`'
+    default: "game.love"
+    required: true
+  result_dir:
+    description: 'Directory in the GitHub workspace where the love-js files should be located'
+    default: "output"
+    required: false
+  memory:
+    description: 'how much memory the game will require'
+    default: "16777216"
+    required: false
+outputs:
+  love-js-output: 
+    description: 'Path (relative to GitHub workspace) of built love-js'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
