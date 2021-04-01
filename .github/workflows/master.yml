@@ -12,7 +12,7 @@ jobs:
       id: love-js-build
       with:
         title: 'magicshapes'
-        source_file: 'tests/magicshapes.love'
+        source_file: 'test/magicshapes.love'
     # Upload the resulting artifacts
     - uses: actions/upload-artifact@v1
       with:
