@@ -15,12 +15,4 @@ RESULT_DIR=${GITHUB_WORKSPACE}/$INPUT_RESULT_DIR
 mkdir -p "${RESULT_DIR}"
 
 love-js -t $INPUT_TITLE -m $INPUT_MEMORY $SOURCE_FILE $RESULT_DIR
-# build_dir=$(mktemp -d -t love-js-build-XXXXXX)
-# (
-#     cd $build_dir
-#     zip -ry "${INPUT_TITLE}.zip" "${RESULT_DIR}"
-# )
-# mv $build_dir/${INPUT_TITLE}.zip $RESULT_DIR/
-
-# echo "::set-output name=love-js-output::${INPUT_RESULT_DIR}/${INPUT_TITLE}.zip"
 echo "::set-output name=love-js-output::${INPUT_RESULT_DIR}"
