@@ -18,9 +18,8 @@ jobs:
       with:
         name: love-js
         path: ${{ steps.love-js-build.outputs.love-js-output }}
-    - name: Publish generated content to GitHub Pages
-      uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
-        dir: ${{ steps.love-js-build.outputs.love-js-output }}
         branch: gh-pages
-        token: ${{ secrets.ACCESS_TOKEN }}
+        folder: ${{ steps.love-js-build.outputs.love-js-output }}
