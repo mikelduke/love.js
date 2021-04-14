@@ -14,5 +14,5 @@ RESULT_DIR=${GITHUB_WORKSPACE}/$INPUT_RESULT_DIR
 
 mkdir -p "${RESULT_DIR}"
 
-love-js -t $INPUT_TITLE -m $INPUT_MEMORY $SOURCE_FILE $RESULT_DIR
+love-js -c -t $INPUT_TITLE -m $INPUT_MEMORY $SOURCE_FILE $RESULT_DIR
 echo "::set-output name=love-js-output::${INPUT_RESULT_DIR}"
